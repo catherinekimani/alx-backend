@@ -20,6 +20,8 @@ class MRUCache(BaseCaching):
                 print("DISCARD: {}".format(discarded_key))
             self.cache_data[key] = item
             self.order.append(key)
+        else:
+            return None
 
     def get(self, key):
         """ Get an item by key """
